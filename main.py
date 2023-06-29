@@ -36,10 +36,10 @@ llm = OpenAI(model_name=model_name, openai_api_key = st.secrets["openai_api_key"
 # create PandasAI object, passing the LLM
 pandas_ai = PandasAI(llm
 
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.write(df.head(3))
-    prompt = st.text_area("Enter your prompt:")
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        st.write(df.head(3))
+        prompt = st.text_area("Enter your prompt:")
 
     # Generate output
     if st.button("Generate"):
