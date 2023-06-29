@@ -28,7 +28,8 @@ from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
 # create an LLM by instantiating OpenAI object, and passing API token
-llm = OpenAI(api_token="sk-YOUR_KEY_HERE")
+#llm = OpenAI(api_token="sk-YOUR_KEY_HERE")
+llm = OpenAI(model_name=model_name, openai_api_key = st.secrets["openai_api_key"], streaming=True)
 
 # create PandasAI object, passing the LLM
 pandas_ai = PandasAI(llm
