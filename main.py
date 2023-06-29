@@ -34,7 +34,7 @@ model_name = "gpt-3.5-turbo"
 llm = OpenAI(model_name=model_name, openai_api_key = st.secrets["openai_api_key"], streaming=True)
 
 # create PandasAI object, passing the LLM
-pandas_ai = PandasAI(llm
+pandas_ai = PandasAI(llm)
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
