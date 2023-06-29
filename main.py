@@ -29,6 +29,8 @@ from pandasai.llm.openai import OpenAI
 
 # create an LLM by instantiating OpenAI object, and passing API token
 #llm = OpenAI(api_token="sk-YOUR_KEY_HERE")
+model_name = "gpt-3.5-turbo"
+# model_name = "gpt-4"
 llm = OpenAI(model_name=model_name, openai_api_key = st.secrets["openai_api_key"], streaming=True)
 
 # create PandasAI object, passing the LLM
